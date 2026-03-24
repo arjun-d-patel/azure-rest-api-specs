@@ -8,6 +8,7 @@ using TypeSpec.Http;
 using Azure.ResourceManager;
 using Azure.Core;
 using Azure.ResourceManager.Foundations;
+using TypeSpec.Versioning;
 
 namespace Microsoft.Network;
 
@@ -23187,6 +23188,7 @@ model VirtualNetworkPropertiesFormat {
   /**
    * A summarized list of advertised prefixes for the virtual network.
    */
+  @added(Versions.v2025_07_01)
   summarizedGatewayPrefixes?: AddressSpace;
 }
 
@@ -29911,6 +29913,7 @@ model VirtualNetworkAppliancePropertiesFormat {
   /**
    * Whether the specific virtual network appliance is IPv4 or Dual Stack. Default is IPv4.
    */
+  @added(Versions.v2025_07_01)
   privateIPAddressVersion?: VirtualNetworkApplianceIpVersionType;
 
   /**
@@ -29934,6 +29937,7 @@ model VirtualNetworkAppliancePropertiesFormat {
 /**
  * IP address version.
  */
+@added(Versions.v2025_07_01)
 union VirtualNetworkApplianceIpVersionType {
   string,
 
